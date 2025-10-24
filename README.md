@@ -32,14 +32,15 @@ python -m http.server 8000
 
 ## Emotions & Mapping
 
-The app currently supports: `happy`, `sad`, `anxious`, `excited`, `calm`.  
-Each maps to:
+The app currently supports many moods (e.g. `happy`, `sad`, `anxious`, `excited`, `calm`, `hopeful`, `playful`, `tired`, `angry`, `nostalgic`).
+
+Each emotion maps to:
 
 - creature (emoji + name)
-- a short motivational quote
+- multiple motivational quotes (the UI will rotate through them and will not repeat the same quote until all have been shown)
 - background/color palette and UI accents
 
-You can change or add emotions in `script.js` by editing the `EMOTIONS` object.
+You can change or add emotions and quotes in `script.js` by editing the `EMOTIONS` object. The app uses an internal quote manager that shuffles quotes and returns a new one each Click (no immediate repeats until the pool is exhausted).
 
 ## Fonts
 
