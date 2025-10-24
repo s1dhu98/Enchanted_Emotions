@@ -72,3 +72,4 @@ This project is intentionally small and free to modify. No external assets (imag
 If you want, I can:
 - swap emoji for SVG creature illustrations and add subtle motion (floating, wings flapping), or
 - add a small README section with development commands and a one-click preview script.
+learning branches
