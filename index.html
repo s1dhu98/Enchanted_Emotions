@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enchanted Emotions — How are you feeling today?</title>
+  <!-- Google Fonts: Cinzel Decorative and Mystery Quest (fallbacks included) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Mystery+Quest&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Enchanted Emotions</h1>
+    <p class="tagline">A tiny wizard's spellbook that reads your mood and conjures comfort.</p>
+  </header>
+
+  <main class="container" id="app">
+    <!-- Modal that asks the user the question on page load -->
+    <div class="modal" id="moodModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-sheet">
+        <h2 id="modalTitle">How are you feeling today?</h2>
+        <label for="emotionSelect" class="visually-hidden">Choose your emotion</label>
+        <div class="selector-row">
+          <select id="emotionSelect" aria-label="Select your emotion">
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😔 Sad</option>
+            <option value="anxious">😰 Anxious</option>
+            <option value="excited">🤩 Excited</option>
+            <option value="calm">😌 Calm</option>
+          </select>
+          <button id="confirmEmotion" class="btn">Choose</button>
+        </div>
+        <p class="hint">Or change your feeling later using the selector below.</p>
+      </div>
+    </div>
+
+    <section class="controls" aria-label="Emotion controls">
+      <label for="emotionSelectDock" class="sr-only">How are you feeling?</label>
+      <div class="dock">
+        <select id="emotionSelectDock" aria-label="Select your emotion (dock)">
+          <option value="happy">😊 Happy</option>
+          <option value="sad">😔 Sad</option>
+          <option value="anxious">😰 Anxious</option>
+          <option value="excited">🤩 Excited</option>
+          <option value="calm">😌 Calm</option>
+        </select>
+        <button id="clickMe" class="btn" aria-live="polite">✨ Click Me</button>
+      </div>
+    </section>
+
+    <section class="stage" aria-live="polite">
+      <div class="parchment">
+        <div class="creature" id="creature" aria-hidden="true">🦄</div>
+        <div class="creature-name" id="creatureName">Unicorn</div>
+        <blockquote class="quote" id="quote">"May your path be lit with starlight."</blockquote>
+      </div>
+    </section>
+
+    <audio id="chimeAudio" preload="auto"></audio>
+  </main>
+
+  <footer class="site-footer">
+    <small>Made with a pinch of stardust — feel free to change the spells.</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
