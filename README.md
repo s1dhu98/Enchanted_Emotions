@@ -73,3 +73,4 @@ If you want, I can:
 - swap emoji for SVG creature illustrations and add subtle motion (floating, wings flapping), or
 - add a small README section with development commands and a one-click preview script.
 learning branches
+- adding one more line just for seeing changes
